@@ -1,0 +1,16 @@
+/* Screens 520px and wider */
+@media (min-width: 32.5rem) {
+  nav ul {
+    display: flex !important;  /* always visible on larger screens */
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 1rem;
+  }
+
+  #hamburger {
+    display: none; /* hide hamburger */
+  }
+}
