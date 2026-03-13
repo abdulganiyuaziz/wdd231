@@ -1,0 +1,85 @@
+{
+ "members":[
+
+ {
+ "name":"Accra Tech Solutions",
+ "address":"123 Ring Road, Accra",
+ "phone":"+233 24 111 2222",
+ "website":"https://accratech.com",
+ "image":"company1.jpg",
+ "membership":3
+ },
+
+ {
+ "name":"Golden Foods Ltd",
+ "address":"45 Osu Street, Accra",
+ "phone":"+233 20 333 4444",
+ "website":"https://57chocolategh.com/",
+ "image":"company2.jpg",
+ "membership":2
+ },
+
+ {
+ "name":"City Bank Ghana",
+ "address":"Airport Area, Accra",
+ "phone":"+233 30 555 6666",
+ "website":"https://citybank.com",
+ "image":"company3.jpg",
+ "membership":3
+ },
+
+ {
+ "name":"Accra Printing Press",
+ "address":"Tema Station, Accra",
+ "phone":"+233 20 777 8888",
+ "website":"https://www.ghanayello.com/company/44544/Printing_Imaging_Solutins_Ent",
+ "image":"company4.jfif",
+ "membership":1
+ },
+
+ {
+ "name":"Green Farm Market",
+ "address":"Madina Market",
+ "phone":"+233 24 222 1111",
+ "website":"https://tortoisepath.com/place/the-farmers-market-tema/",
+ "image":"company5.jfif",
+ "membership":2
+ },
+
+ {
+ "name":"Star Electronics",
+ "address":"Spintex Road",
+ "phone":"+233 20 999 8888",
+ "website":"https://starelectronics.com",
+ "image":"company6.jfif",
+ "membership":1
+ },
+
+ {
+ "name":"Ocean Travel Agency",
+ "address":"Labone, Accra",
+ "phone":"+233 24 555 1212",
+ "website":"https://oceantravel.com",
+ "image":"company7.png",
+ "membership":2
+ },
+
+ {
+ "name":"Electricity Company of Ghana Limited",
+ "address":"Labone, Accra",
+ "phone":"+233 30 261 6111",
+ "website":"https://ecg.com.gh",
+ "image":"company8.jpg",
+ "membership":3
+ },
+ {
+ "name":"Ghana Telecom Solutions",
+ "address":"High Street, Accra",
+ "phone":"+233 30 270 1234",
+ "website":"https://ghanatelecom.com",
+ "image":"company10.jfif",
+ "membership":3
+}
+
+ ]
+}
