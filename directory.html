@@ -4,20 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Accra Chamber Directory</title>
+<title>Business Directory - Accra Chamber of Commerce</title>
 
-<meta name="description" content="Accra Chamber of Commerce Business Directory - Find local businesses and members">
+<meta name="description" content="Accra Chamber of Commerce Business Directory - Find local businesses and members in Accra">
 <meta name="author" content="Abdul Ganiyu Abdul Aziz">
-<meta name="keywords" content="Accra, Chamber, Commerce, Business, Directory, Members">
+<meta name="keywords" content="Accra, Chamber, Commerce, Business, Directory, Members, Ghana">
 <meta name="theme-color" content="#003366">
+<meta name="publisher" content="Accra Chamber of Commerce">
 
 <link rel="icon" href="images/favicon.jfif" type="image/x-icon">
+<link rel="canonical" href="https://abdulganiyuaziz.github.io/wdd231/chamber/directory.html">
 
-<!-- Open Graph Meta -->
-<meta property="og:title" content="Accra Chamber of Commerce">
-<meta property="og:description" content="Business directory of chamber members">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Accra Chamber of Commerce - Business Directory">
+<meta property="og:description" content="Discover local businesses and chamber members in Accra">
 <meta property="og:image" content="images/logo.jfif">
 <meta property="og:url" content="https://abdulganiyuaziz.github.io/wdd231/chamber/directory.html">
+<meta property="og:site_name" content="Accra Chamber">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Accra Chamber - Business Directory">
+<meta name="twitter:description" content="Find local businesses and chamber members">
+<meta name="twitter:image" content="images/logo.jfif">
 
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/small.css">
@@ -27,49 +35,96 @@
 </head>
 
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header>
+<header class="site-header" role="banner">
+  <div class="header-container">
+    <div class="header-branding">
+      <h1>Accra Chamber of Commerce</h1>
+      <p class="tagline">Supporting Local Business Growth</p>
+    </div>
 
-<h1>Accra Chamber of Commerce</h1>
+    <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navigation" class="menu-toggle">
+      <span class="hamburger">☰</span>
+    </button>
+  </div>
 
-<button id="menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navigation">☰</button>
-
-<nav>
-<ul class="navigation" id="navigation" role="navigation">
-<li><a href="#">Home</a></li>
-<li><a href="directory.html">Directory</a></li>
-<li><a href="#">Join</a></li>
-<li><a href="#">Discover</a></li>
-</ul>
-</nav>
-
+  <nav class="site-nav" role="navigation">
+    <ul class="navigation" id="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html" aria-current="page">Directory</a></li>
+      <li><a href="#discover">Discover</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<main>
+<main id="main-content" class="site-main">
+  <div class="main-container">
+    
+    <section class="page-intro">
+      <h2>Business Directory</h2>
+      <p>Browse and explore all our chamber members. Use the grid or list view to find businesses in your area.</p>
+    </section>
 
-<h2>Business Directory</h2>
+    <div class="view-controls menu">
+      <button id="grid" aria-label="Display members in grid view">
+        <span>Grid View</span>
+      </button>
+      <button id="list" aria-label="Display members in list view">
+        <span>List View</span>
+      </button>
+    </div>
 
-<div class="menu">
-<button id="grid" aria-label="Display members in grid view">Grid</button>
-<button id="list" aria-label="Display members in list view">List</button>
-</div>
+    <section id="members" class="grid" role="region" aria-label="Business members directory" data-view="grid"></section>
 
-<section id="members" class="grid" role="region" aria-label="Business members"></section>
-
+  </div>
 </main>
 
-<footer>
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-container">
+    
+    <div class="footer-content">
+      
+      <div class="footer-section footer-about">
+        <h3>About Accra Chamber</h3>
+        <p>Supporting business growth and economic development in Accra, Ghana.</p>
+      </div>
 
-<p>Accra Chamber of Commerce</p>
-<p>Email: info@accracc.org</p>
-<p>Phone: +233 54 244 4693</p>
+      <div class="footer-section footer-contact">
+        <h3>Contact Us</h3>
+        <address>
+          <p><strong>Organization:</strong> Accra Chamber of Commerce</p>
+          <p><strong>Email:</strong> <a href="mailto:info@accracc.org">info@accracc.org</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+233542444693">+233 54 244 4693</a></p>
+        </address>
+      </div>
 
-<p>
-© <span id="year"></span> | Abdul Ganiyu Abdul Aziz | WDD 231
-</p>
+      <div class="footer-section footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="#discover">Discover</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
 
-<p id="lastModified"></p>
+    </div>
 
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <p>&copy; <span id="year"></span> Accra Chamber of Commerce. All rights reserved.</p>
+      </div>
+      <div class="footer-credits">
+        <p>Developed by Abdul Ganiyu Abdul Aziz | <span>WDD 231</span></p>
+      </div>
+      <div class="footer-modified">
+        <p id="lastModified"></p>
+      </div>
+    </div>
+
+  </div>
 </footer>
 
 </body>

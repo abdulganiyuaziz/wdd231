@@ -13,7 +13,6 @@ async function getMembers() {
   }
 }
 
-// Initialize display
 document.addEventListener("DOMContentLoaded", () => {
   getMembers();
 });
@@ -71,8 +70,6 @@ menuButton.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", navigation.classList.contains("open"));
 });
 
-
 document.querySelector("#year").textContent = new Date().getFullYear();
-
 document.querySelector("#lastModified").textContent =
   "Last Modified: " + document.lastModified;
