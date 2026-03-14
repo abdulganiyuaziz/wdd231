@@ -5,16 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Accra Chamber Directory</title>
-<meta name="description" content="Accra Chamber of Commerce Business Directory">
-<meta name="author" content="Your Full Name">
 
-<link rel="icon" href="images/favicon.jfif">
+<meta name="description" content="Accra Chamber of Commerce Business Directory - Find local businesses and members">
+<meta name="author" content="Abdul Ganiyu Abdul Aziz">
+<meta name="keywords" content="Accra, Chamber, Commerce, Business, Directory, Members">
+<meta name="theme-color" content="#003366">
 
-<!-- Facebook Meta -->
+<link rel="icon" href="images/favicon.jfif" type="image/x-icon">
+
+<!-- Open Graph Meta -->
 <meta property="og:title" content="Accra Chamber of Commerce">
 <meta property="og:description" content="Business directory of chamber members">
-<meta property="og:image" content="images/logo.png">
-<meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+<meta property="og:image" content="images/logo.jfif">
+<meta property="og:url" content="https://abdulganiyuaziz.github.io/wdd231/chamber/directory.html">
 
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/small.css">
@@ -26,10 +29,13 @@
 <body>
 
 <header>
+
 <h1>Accra Chamber of Commerce</h1>
 
+<button id="menu" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navigation">☰</button>
+
 <nav>
-<ul>
+<ul class="navigation" id="navigation" role="navigation">
 <li><a href="#">Home</a></li>
 <li><a href="directory.html">Directory</a></li>
 <li><a href="#">Join</a></li>
@@ -44,11 +50,11 @@
 <h2>Business Directory</h2>
 
 <div class="menu">
-<button id="grid">Grid</button>
-<button id="list">List</button>
+<button id="grid" aria-label="Display members in grid view">Grid</button>
+<button id="list" aria-label="Display members in list view">List</button>
 </div>
 
-<section id="members" class="grid"></section>
+<section id="members" class="grid" role="region" aria-label="Business members"></section>
 
 </main>
 
@@ -59,7 +65,7 @@
 <p>Phone: +233 54 244 4693</p>
 
 <p>
-© <span id="2026"></span> | Abdul Ganiyu Abdul Aziz| WDD 231
+© <span id="year"></span> | Abdul Ganiyu Abdul Aziz | WDD 231
 </p>
 
 <p id="lastModified"></p>

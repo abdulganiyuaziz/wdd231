@@ -1,11 +1,26 @@
-@media (min-width: 768px){
+@media (min-width:768px){
 
-.grid{
-grid-template-columns: repeat(3,1fr);
+#menu{
+display:none;
 }
 
-nav ul{
-justify-content:flex-end;
+.navigation{
+display:flex;
+flex-direction:row;
+justify-content:center;
+gap:20px;
+}
+
+.grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+@media (min-width:1100px){
+
+.grid{
+grid-template-columns:repeat(4,1fr);
 }
 
 }
