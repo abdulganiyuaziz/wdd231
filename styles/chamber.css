@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #004080 0%, #0052a3 100%);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* NAVIGATION */
+nav {
+  background: #002d5a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav ul li {
+  flex: 1;
+  min-width: 120px;
+}
+
+nav a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: #0077cc;
+  transform: translateY(-2px);
+}
+
+nav a.active {
+  background: #ff6600;
+  font-weight: 600;
+}
+
+/* MAIN */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hero img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 20px;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.cta {
+  background: #ff6600;
+  padding: 12px 28px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #ff6600;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background: #e55a00;
+  box-shadow: 0 4px 10px rgba(255, 102, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+.cta:active {
+  transform: translateY(0);
+}
+
+/* SECTIONS */
+section {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  color: #00801c;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #ff6600;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* EVENTS */
+.events ul {
+  list-style: none;
+  padding: 0;
+}
+
+.events li {
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  background: #f0f4f8;
+  border-left: 4px solid #ff6600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.events li:hover {
+  background: #e8f0f7;
+  transform: translateX(8px);
+}
+
+/* WEATHER */
+.weather {
+  background: linear-gradient(135deg, #e8f4f8 0%, #f0f8fc 100%);
+}
+
+.weather p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+#temp {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #004080;
+}
+
+#desc {
+  color: #666;
+  font-style: italic;
+}
+
+/* SPOTLIGHT */
+.spotlights h2 {
+  grid-column: 1 / -1;
+}
+
+#spotlight-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+#spotlight-container section {
+  border: none;
+  padding: 1.5rem;
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#spotlight-container section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#spotlight-container img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ff6600;
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(135deg, #004080 0%, #002d5a 100%);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero {
+    grid-column: 1 / -1;
+  }
+
+  .spotlights {
+    grid-column: 1 / -1;
+  }
+
+  .hero img {
+    height: 400px;
+  }
+
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #spotlight-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeIn 0.6s ease-out;
+}
