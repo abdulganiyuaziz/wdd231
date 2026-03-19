@@ -1,6 +1,15 @@
+// MENU TOGGLE
+const menuBtn = document.getElementById("menu");
+const nav = document.querySelector("nav ul");
+
+menuBtn.addEventListener("click", () => {
+  nav.classList.toggle("open");
+});
+
 // WEATHER API
-const apiKey = "https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}"; // <-- PUT YOUR KEY HERE
-const weatherURL = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`;
+const apiKey = "YOUR_API_KEY"; // <-- PUT YOUR KEY HERE
+
+const weatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=5.6037&lon=-0.1870&units=metric&appid=${apiKey}`;
 
 async function getWeather() {
   try {
@@ -18,15 +27,12 @@ async function getWeather() {
 
     const days = [0, 8, 16];
 
-    days.forEach((i) => {
-      const date = data.list[i].dt_txt;
-      const temp = data.list[i].main.temp;
-
+    days.forEach(i => {
       const p = document.createElement("p");
-      p.textContent = `${date}: ${temp}°C`;
-
+      p.textContent = `${data.list[i].dt_txt}: ${data.list[i].main.temp}°C`;
       forecast.appendChild(p);
     });
+
   } catch (error) {
     console.error("Weather error:", error);
   }
@@ -35,13 +41,12 @@ async function getWeather() {
 getWeather();
 
 // SPOTLIGHTS
-const membersURL = "../data/members.json";
+const membersURL = "data/members.json";
 
 async function getSpotlights() {
   try {
     const response = await fetch(membersURL);
     const data = await response.json();
-
     displaySpotlights(data.members);
   } catch (error) {
     console.error("Error loading members:", error);
@@ -52,18 +57,18 @@ function displaySpotlights(members) {
   const container = document.getElementById("spotlight-container");
 
   const filtered = members.filter(
-    (m) => m.membership === 2 || m.membership === 3,
+    m => m.membership === 2 || m.membership === 3
   );
 
   const shuffled = filtered.sort(() => 0.5 - Math.random());
   const selected = shuffled.slice(0, 3);
 
-  selected.forEach((member) => {
+  selected.forEach(member => {
     const card = document.createElement("section");
 
     card.innerHTML = `
       <h3>${member.name}</h3>
-      <img src="images/${member.image}" alt="${member.name}">
+      <img src="images/${member.image}" alt="${member.name} logo">
       <p>📞 ${member.phone}</p>
       <p>📍 ${member.address}</p>
       <a href="${member.website}" target="_blank">Visit Website</a>

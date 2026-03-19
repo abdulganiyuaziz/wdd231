@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Home - Accra Chamber of Commerce</title>
+
+<meta name="description" content="Accra Chamber of Commerce - Welcome to the premier business organization supporting local commerce and economic development in Accra, Ghana">
+<meta name="author" content="Abdul Ganiyu Abdul Aziz">
+<meta name="keywords" content="Accra, Chamber, Commerce, Business, Ghana, Networking, Events">
+<meta name="theme-color" content="#003366">
+<meta name="publisher" content="Accra Chamber of Commerce">
+
+<link rel="icon" href="../images/favicon.jfif" type="image/x-icon">
+<link rel="canonical" href="https://abdulganiyuaziz.github.io/wdd231/chamber/index.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Accra Chamber of Commerce - Home">
+<meta property="og:description" content="Welcome to Accra Chamber of Commerce - Supporting local business growth">
+<meta property="og:image" content="../images/logo.jfif">
+<meta property="og:url" content="https://abdulganiyuaziz.github.io/wdd231/chamber/index.html">
+<meta property="og:site_name" content="Accra Chamber">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Accra Chamber - Home">
+<meta name="twitter:description" content="Welcome to Accra Chamber of Commerce">
+<meta name="twitter:image" content="../images/logo.jfif">
+
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/small.css">
+<link rel="stylesheet" href="../css/larger.css">
+
+<script src="../js/utils.js" defer></script>
+<script src="../js/home.js" defer></script>
+</head>
+
+<body>
+
+<main id="main-content" class="site-main">
+  <div class="main-container">
+    
+    <!-- Hero Section -->
+    <section class="hero" role="region" aria-label="Hero banner">
+      <img src="../images/logo.jfif" alt="Accra Chamber of Commerce banner" class="hero-image">
+      <div class="hero-content">
+        <h2>Welcome to Accra Chamber of Commerce</h2>
+        <p>Your gateway to business opportunities and community growth</p>
+        <a href="#join" class="cta-button">Join Our Chamber</a>
+      </div>
+    </section>
+
+    <!-- Current Events Section -->
+    <section class="events" role="region" aria-label="Upcoming events">
+      <h2>Upcoming Events</h2>
+      <div class="events-container">
+        <article class="event-card">
+          <h3>Annual Business Networking Breakfast</h3>
+          <p><strong>Date:</strong> March 28, 2026</p>
+          <p><strong>Time:</strong> 7:00 AM - 9:00 AM</p>
+          <p><strong>Location:</strong> Accra International Hotel</p>
+          <p>Join us for our annual networking breakfast where you can connect with business leaders and entrepreneurs.</p>
+        </article>
+        
+        <article class="event-card">
+          <h3>Business Growth Workshop</h3>
+          <p><strong>Date:</strong> April 5, 2026</p>
+          <p><strong>Time:</strong> 10:00 AM - 12:00 PM</p>
+          <p><strong>Location:</strong> Chamber Office, Downtown Accra</p>
+          <p>Learn strategies to scale your business and improve profitability in this interactive workshop.</p>
+        </article>
+        
+        <article class="event-card">
+          <h3>Chamber Monthly Mixer</h3>
+          <p><strong>Date:</strong> April 15, 2026</p>
+          <p><strong>Time:</strong> 4:00 PM - 6:00 PM</p>
+          <p><strong>Location:</strong> The Business Hub, Osu</p>
+          <p>Our monthly casual networking event. Perfect for making new business connections.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather" role="region" aria-label="Current weather">
+      <h2>Weather for Accra</h2>
+      <div class="weather-container">
+        <div class="current-weather">
+          <h3>Current Conditions</h3>
+          <div id="current-temp" class="weather-item">
+            <p>Temperature: <span id="temp">--</span>°C</p>
+            <p>Description: <span id="description">Loading...</span></p>
+          </div>
+        </div>
+        
+        <div class="weather-forecast">
+          <h3>3-Day Forecast</h3>
+          <div id="forecast-container" class="forecast-items">
+            <!-- Forecast items will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spotlights Section -->
+    <section class="spotlights" role="region" aria-label="Featured business members">
+      <h2>Featured Businesses</h2>
+      <p class="spotlight-intro">Discover some of our valued Gold and Silver member organizations</p>
+      <div id="spotlights-container" class="spotlights-container">
+        <article class="spotlight-card">
+          <div class="spotlight-loading">Loading featured businesses...</div>
+        </article>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+</body>
+</html>

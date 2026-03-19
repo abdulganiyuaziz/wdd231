@@ -268,6 +268,266 @@ font-weight: 600;
   color: #0055aa;
 }
 
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 300px;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 51, 102, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.hero-content h2 {
+  font-size: 1.8rem;
+  margin: 0 0 1rem 0;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #FFD700;
+  color: #003366;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #FFD700;
+}
+
+.cta-button:hover, .cta-button:focus {
+  background: transparent;
+  color: #FFD700;
+  outline: 2px solid #FFD700;
+  outline-offset: 2px;
+}
+
+/* Events Section */
+.events {
+  margin-bottom: 2rem;
+}
+
+.events h2 {
+  color: #003366;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.events-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.event-card {
+  background: white;
+  border-left: 4px solid #0055aa;
+  border-radius: 4px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.event-card h3 {
+  color: #003366;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.event-card p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+/* Weather Section */
+.weather {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.weather h2 {
+  color: #003366;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.weather-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.current-weather,
+.weather-forecast {
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.current-weather h3,
+.weather-forecast h3 {
+  color: #003366;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.weather-item p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.forecast-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.forecast-item {
+  background: white;
+  padding: 1rem;
+  border-left: 3px solid #0055aa;
+  border-radius: 4px;
+}
+
+.forecast-item p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.forecast-item strong {
+  color: #003366;
+}
+
+/* Spotlights Section */
+.spotlights {
+  margin-bottom: 2rem;
+}
+
+.spotlights h2 {
+  color: #003366;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.spotlight-intro {
+  color: #666;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.spotlights-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.spotlight-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-top: 4px solid #0055aa;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.spotlight-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #003366;
+}
+
+.spotlight-card h3 {
+  color: #003366;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.membership-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.membership-badge.gold {
+  background: #FFD700;
+  color: #333;
+}
+
+.membership-badge.silver {
+  background: #c0c0c0;
+  color: #333;
+}
+
+.spotlight-card p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.spotlight-card a {
+  color: #0055aa;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.spotlight-card a:hover, .spotlight-card a:focus {
+  text-decoration: underline;
+  color: #003366;
+}
+
 footer{
 background:#222;
 color:white;

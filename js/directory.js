@@ -1,7 +1,9 @@
 const url = "data/members.json";
-const cards = document.querySelector("#members");
 
 async function getMembers() {
+  const cards = document.querySelector("#members");
+  if (!cards) return;
+  
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -14,10 +16,36 @@ async function getMembers() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  injectNavigation('directory');
+  injectFooter();
   getMembers();
+  
+  // Setup button event listeners
+  const gridButton = document.querySelector("#grid");
+  const listButton = document.querySelector("#list");
+  
+  if (gridButton) {
+    gridButton.addEventListener("click", () => {
+      const cards = document.querySelector("#members");
+      cards.classList.add("grid");
+      cards.classList.remove("list");
+      getMembers();
+    });
+  }
+  
+  if (listButton) {
+    listButton.addEventListener("click", () => {
+      const cards = document.querySelector("#members");
+      cards.classList.add("list");
+      cards.classList.remove("grid");
+      getMembers();
+    });
+  }
 });
 
 function displayMembers(members) {
+  const cards = document.querySelector("#members");
+  if (!cards) return;
 
   cards.innerHTML = "";
 
@@ -44,32 +72,3 @@ function displayMembers(members) {
 
   });
 }
-
-
-const gridButton = document.querySelector("#grid");
-const listButton = document.querySelector("#list");
-
-gridButton.addEventListener("click", () => {
-  cards.classList.add("grid");
-  cards.classList.remove("list");
-  getMembers();
-});
-
-listButton.addEventListener("click", () => {
-  cards.classList.add("list");
-  cards.classList.remove("grid");
-  getMembers();
-});
-
-
-const menuButton = document.querySelector("#menu");
-const navigation = document.querySelector(".navigation");
-
-menuButton.addEventListener("click", () => {
-  navigation.classList.toggle("open");
-  menuButton.setAttribute("aria-expanded", navigation.classList.contains("open"));
-});
-
-document.querySelector("#year").textContent = new Date().getFullYear();
-document.querySelector("#lastModified").textContent =
-  "Last Modified: " + document.lastModified;
