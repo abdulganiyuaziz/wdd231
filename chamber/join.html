@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Join - Accra Chamber of Commerce</title>
+
+<meta name="description" content="Join the Accra Chamber of Commerce and grow your business with our membership programs and networking opportunities.">
+<meta name="author" content="Abdul Ganiyu Abdul Aziz">
+<meta name="keywords" content="Accra, Chamber, Commerce, Join, Membership, Business">
+<meta name="theme-color" content="#003366">
+<meta name="publisher" content="Accra Chamber of Commerce">
+
+<link rel="icon" href="../images/favicon.jfif" type="image/x-icon">
+<link rel="canonical" href="https://abdulganiyuaziz.github.io/wdd231/chamber/join.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Join Accra Chamber of Commerce">
+<meta property="og:description" content="Join our chamber and grow your business network">
+<meta property="og:image" content="../images/logo.jfif">
+<meta property="og:url" content="https://abdulganiyuaziz.github.io/wdd231/chamber/join.html">
+<meta property="og:site_name" content="Accra Chamber">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Join Accra Chamber of Commerce">
+<meta name="twitter:description" content="Join our chamber membership program">
+<meta name="twitter:image" content="../images/logo.jfif">
+
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/small.css">
+<link rel="stylesheet" href="../css/larger.css">
+
+<style>
+  /* Form Section */
+  .join-container {
+    display: grid;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  @media (min-width: 900px) {
+    .join-container {
+      grid-template-columns: 1fr 350px;
+      align-items: start;
+    }
+  }
+
+  .join-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .join-form h2 {
+    color: #003366;
+    margin-top: 0;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #003366;
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .form-group input[type="submit"] {
+    background: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .form-group input[type="submit"]:hover {
+    background: #002540;
+  }
+
+  .form-group input[type="submit"]:focus {
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.3);
+  }
+
+  /* Membership Cards Section */
+  .membership-section {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .membership-section h3 {
+    color: #003366;
+    margin-top: 0;
+  }
+
+  .membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 900px) {
+    .membership-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .membership-card {
+    background: white;
+    border: 2px solid #003366;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: slideInUp 0.6s ease-out;
+  }
+
+  .membership-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .membership-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .membership-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .membership-card:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .membership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
+  }
+
+  .membership-card h4 {
+    color: #003366;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+  }
+
+  .membership-card .price {
+    color: #ff6600;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+
+  .membership-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #003366;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  .membership-card a:hover {
+    background: #002540;
+  }
+
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 1rem;
+  }
+
+  .modal-header h2 {
+    margin: 0;
+    color: #003366;
+  }
+
+  .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+  }
+
+  .modal-close:hover {
+    color: #003366;
+  }
+
+  .modal-body {
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .modal-body h3 {
+    color: #003366;
+    margin-top: 1rem;
+  }
+
+  .modal-body ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .modal-body li {
+    margin: 0.5rem 0;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .join-container {
+      grid-template-columns: 1fr;
+    }
+
+    .join-form {
+      padding: 1.5rem;
+    }
+
+    .modal-content {
+      width: 95%;
+      padding: 1.5rem;
+    }
+  }
+</style>
+
+</head>
+
+<body>
+
+<main id="main-content" class="site-main">
+  <div class="main-container">
+    
+    <!-- Hero Section -->
+    <section class="hero" role="region" aria-label="Join Chamber banner">
+      <img src="../images/logo.jfif" alt="Accra Chamber of Commerce" class="hero-image">
+      <div class="hero-content">
+        <h2>Join Our Chamber</h2>
+        <p>Become part of a thriving business community</p>
+      </div>
+    </section>
+
+    <!-- Join Content Container -->
+    <div class="join-container">
+      
+      <!-- Membership Form -->
+      <section class="join-form">
+        <h2>Membership Application</h2>
+        <form id="membershipForm" method="get" action="thankyou.html">
+          
+          <div class="form-group">
+            <label for="firstName">First Name <span aria-label="required">*</span></label>
+            <input 
+              type="text" 
+              id="firstName" 
+              name="firstName" 
+              title="Enter your first name"
+              autocomplete="given-name"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name <span aria-label="required">*</span></label>
+            <input 
+              type="text" 
+              id="lastName" 
+              name="lastName" 
+              title="Enter your last name"
+              autocomplete="family-name"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="orgTitle">Organizational Title <span aria-label="required">*</span></label>
+            <input 
+              type="text" 
+              id="orgTitle" 
+              name="orgTitle" 
+              title="Your position or title within the organization"
+              autocomplete="organization-title"
+              pattern="^[a-zA-Z\s\-]{7,}$"
+              placeholder="e.g., Executive Director"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span aria-label="required">*</span></label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              title="Enter a valid email address"
+              autocomplete="email"
+              placeholder="example@company.com"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Mobile Phone <span aria-label="required">*</span></label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              title="Enter your mobile phone number"
+              autocomplete="tel"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="businessName">Business/Organization Name <span aria-label="required">*</span></label>
+            <input 
+              type="text" 
+              id="businessName" 
+              name="businessName" 
+              title="Enter the name of your business or organization"
+              autocomplete="organization"
+              required>
+          </div>
+
+          <div class="form-group">
+            <label for="membershipLevel">Membership Level <span aria-label="required">*</span></label>
+            <select id="membershipLevel" name="membershipLevel" title="Select your membership level" required>
+              <option value="">-- Select Membership Level --</option>
+              <option value="np">NP Membership (Non-Profit - Free)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="businessDescription">Business Description</label>
+            <textarea 
+              id="businessDescription" 
+              name="businessDescription" 
+              title="Describe your business or organization"
+              placeholder="Tell us about your business, products, or services..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <input 
+              type="hidden" 
+              id="timestamp" 
+              name="timestamp"
+              value="">
+          </div>
+
+          <div class="form-group">
+            <input 
+              type="submit" 
+              value="Complete Application"
+              aria-label="Submit membership application">
+          </div>
+
+        </form>
+      </section>
+
+      <!-- Membership Levels Sidebar -->
+      <section class="membership-section" aria-label="Membership levels">
+        <h3>Membership Levels</h3>
+        <div class="membership-cards">
+          
+          <div class="membership-card" role="article">
+            <h4>NP Membership</h4>
+            <p class="price">Free</p>
+            <p>For Non-Profit Organizations</p>
+            <a href="#" class="learn-more" data-membership="np" onclick="openModal(event, 'npModal')">Learn More</a>
+          </div>
+
+          <div class="membership-card" role="article">
+            <h4>Bronze</h4>
+            <p class="price">GHS 500/yr</p>
+            <p>Perfect for Startups</p>
+            <a href="#" class="learn-more" data-membership="bronze" onclick="openModal(event, 'bronzeModal')">Learn More</a>
+          </div>
+
+          <div class="membership-card" role="article">
+            <h4>Silver</h4>
+            <p class="price">GHS 1,500/yr</p>
+            <p>Growing Businesses</p>
+            <a href="#" class="learn-more" data-membership="silver" onclick="openModal(event, 'silverModal')">Learn More</a>
+          </div>
+
+          <div class="membership-card" role="article">
+            <h4>Gold</h4>
+            <p class="price">GHS 3,000/yr</p>
+            <p>Established Enterprises</p>
+            <a href="#" class="learn-more" data-membership="gold" onclick="openModal(event, 'goldModal')">Learn More</a>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+</main>
+
+<!-- MODALS -->
+
+<!-- NP Membership Modal -->
+<div id="npModal" class="modal" role="dialog" aria-labelledby="npModalTitle">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="npModalTitle">NP Membership Benefits</h2>
+      <button class="modal-close" onclick="closeModal('npModal')" aria-label="Close modal">×</button>
+    </div>
+    <div class="modal-body">
+      <p>Our NP Membership is designed specifically for non-profit organizations seeking to connect with the business community and access networking opportunities.</p>
+      
+      <h3>Benefits Include:</h3>
+      <ul>
+        <li>Networking events access</li>
+        <li>Community directory listing</li>
+        <li>Monthly newsletter</li>
+        <li>Access to chamber forums</li>
+        <li>Social media promotion</li>
+        <li>No membership fees</li>
+      </ul>
+
+      <h3>Perfect For:</h3>
+      <p>Charitable organizations, educational institutions, and community development organizations looking to build partnerships with the business sector.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Bronze Membership Modal -->
+<div id="bronzeModal" class="modal" role="dialog" aria-labelledby="bronzeModalTitle">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="bronzeModalTitle">Bronze Membership Benefits</h2>
+      <button class="modal-close" onclick="closeModal('bronzeModal')" aria-label="Close modal">×</button>
+    </div>
+    <div class="modal-body">
+      <p>Bronze Membership is ideal for startups and new businesses entering the Accra market. Get the foundation you need to grow your network and visibility.</p>
+      
+      <h3>Benefits Include:</h3>
+      <ul>
+        <li>All NP membership benefits</li>
+        <li>Monthly networking breakfast events</li>
+        <li>Discounted event registration (20%)</li>
+        <li>Basic website listing with logo</li>
+        <li>Email updates on business opportunities</li>
+        <li>Access to member resources</li>
+      </ul>
+
+      <h3>Investment:</h3>
+      <p><strong>GHS 500 per year</strong> - Perfect entry point for new businesses</p>
+    </div>
+  </div>
+</div>
+
+<!-- Silver Membership Modal -->
+<div id="silverModal" class="modal" role="dialog" aria-labelledby="silverModalTitle">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="silverModalTitle">Silver Membership Benefits</h2>
+      <button class="modal-close" onclick="closeModal('silverModal')" aria-label="Close modal">×</button>
+    </div>
+    <div class="modal-body">
+      <p>Silver Membership offers comprehensive benefits for growing businesses ready to expand their reach and establish stronger community connections.</p>
+      
+      <h3>Benefits Include:</h3>
+      <ul>
+        <li>All Bronze membership benefits</li>
+        <li>Priority event registration</li>
+        <li>Discounted events (30%)</li>
+        <li>Featured website listing with description</li>
+        <li>Quarterly business training workshops</li>
+        <li>Special networking mixers (monthly)</li>
+        <li>Spotlight newsletter feature (once per year)</li>
+        <li>One free booth at annual trade show</li>
+      </ul>
+
+      <h3>Investment:</h3>
+      <p><strong>GHS 1,500 per year</strong> - Ideal for established growing businesses</p>
+    </div>
+  </div>
+</div>
+
+<!-- Gold Membership Modal -->
+<div id="goldModal" class="modal" role="dialog" aria-labelledby="goldModalTitle">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="goldModalTitle">Gold Membership Benefits</h2>
+      <button class="modal-close" onclick="closeModal('goldModal')" aria-label="Close modal">×</button>
+    </div>
+    <div class="modal-body">
+      <p>Gold Membership is our premier tier, offering maximum visibility and exclusive benefits for established enterprises committed to community leadership.</p>
+      
+      <h3>Benefits Include:</h3>
+      <ul>
+        <li>All Silver membership benefits</li>
+        <li>Premium website listing with full page profile</li>
+        <li>Discounted events (40%)</li>
+        <li>Priority event sponsorship opportunities</li>
+        <li>Exclusive executive roundtable events</li>
+        <li>Quarterly publication feature</li>
+        <li>Free booths at all trade shows</li>
+        <li>Recognition as key chamber partner</li>
+        <li>Custom marketing package</li>
+        <li>Direct access to chamber leadership</li>
+      </ul>
+
+      <h3>Investment:</h3>
+      <p><strong>GHS 3,000 per year</strong> - Premium membership for community leaders</p>
+    </div>
+  </div>
+</div>
+
+<script src="../js/utils.js" defer></script>
+<script src="join.js" defer></script>
+
+</body>
+</html>
