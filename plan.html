@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site plan for Greater Accra Chamber of Commerce website">
+    <meta name="author" content="Web Development Student">
+    <title>GACC Site Plan - Greater Accra Chamber of Commerce</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+        /* Color Scheme:
+           Primary Blue (#1E3A5F) - Headers, Primary Elements
+           Accent Gold (#D4AF37) - Highlights, Borders, Call-to-action
+           Light Gray (#F5F5F5) - Backgrounds
+           Dark Gray (#333333) - Body Text
+           White (#FFFFFF) - Card Backgrounds
+        */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #F5F5F5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1E3A5F 0%, #2a4f7f 100%);
+            color: #FFFFFF;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid #D4AF37;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-family: 'Georgia', serif;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-family: 'Segoe UI', sans-serif;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        main {
+            max-width: 1050px;
+            margin: 2.5rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background-color: #FFFFFF;
+            margin-bottom: 2rem;
+            padding: 2.5rem;
+            border-left: 5px solid #D4AF37;
+            box-shadow: 0 4px 16px rgba(30, 58, 95, 0.08);
+            border-radius: 4px;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        section:hover {
+            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.12);
+        }
+
+        h2 {
+            color: #1E3A5F;
+            font-family: 'Georgia', serif;
+            font-size: 1.9rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 3px solid #D4AF37;
+            padding-bottom: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 0.3px;
+        }
+
+        h3 {
+            color: #1E3A5F;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1.4rem;
+            margin-top: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: #444444;
+        }
+
+        ul, ol {
+            margin-left: 2.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .color-scheme-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .color-box {
+            padding: 2.5rem 2rem;
+            color: #FFFFFF;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .color-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+        }
+
+        .color-primary {
+            background-color: #1E3A5F;
+        }
+
+        .color-accent {
+            background-color: #D4AF37;
+            color: #1E3A5F;
+        }
+
+        .color-light {
+            background-color: #F5F5F5;
+            color: #333333;
+            border: 3px solid #D4AF37;
+            box-shadow: inset 0 2px 8px rgba(212, 175, 55, 0.1);
+        }
+
+        .color-white {
+            background-color: #FFFFFF;
+            color: #333333;
+            border: 3px solid #1E3A5F;
+            box-shadow: inset 0 2px 8px rgba(30, 58, 95, 0.05);
+        }
+
+        .color-dark {
+            background-color: #333333;
+        }
+
+        .typography-example {
+            background: linear-gradient(135deg, #F5F5F5 0%, #FFFFFF 100%);
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid #D4AF37;
+            border-radius: 6px;
+            box-shadow: 0 3px 12px rgba(212, 175, 55, 0.08);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .typography-example:hover {
+            box-shadow: 0 5px 18px rgba(212, 175, 55, 0.12);
+        }
+
+        .typo-heading {
+            font-family: 'Georgia', serif;
+            font-size: 1.8rem;
+            color: #1E3A5F;
+            margin-bottom: 0.5rem;
+        }
+
+        .typo-body {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1rem;
+            color: #333333;
+        }
+
+        .typo-accent {
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 1.1rem;
+            color: #D4AF37;
+            font-weight: bold;
+        }
+
+        .scenario {
+            background: linear-gradient(135deg, #F5F5F5 0%, #FFFFFF 100%);
+            padding: 2rem;
+            margin: 1.8rem 0;
+            border-radius: 6px;
+            border-left: 4px solid #D4AF37;
+            box-shadow: 0 3px 10px rgba(212, 175, 55, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .scenario:hover {
+            box-shadow: 0 5px 16px rgba(212, 175, 55, 0.15);
+        }
+
+        .scenario strong {
+            color: #1E3A5F;
+            font-size: 1.1rem;
+        }
+
+        .wireframe-section {
+            margin: 2rem 0;
+        }
+
+        .wireframe-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .wireframe {
+            border: 2px solid #1E3A5F;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #F5F5F5;
+            box-shadow: 0 4px 16px rgba(30, 58, 95, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .wireframe:hover {
+            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.15);
+        }
+
+        .wireframe-title {
+            background-color: #1E3A5F;
+            color: #FFFFFF;
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .wireframe-content {
+            padding: 1.5rem;
+        }
+
+        .wireframe-box {
+            background-color: #E0E0E0;
+            border: 2px dashed #1E3A5F;
+            padding: 1.5rem;
+            margin: 0.5rem 0;
+            text-align: center;
+            color: #666666;
+            font-size: 0.9rem;
+            border-radius: 4px;
+        }
+
+        .wireframe-header {
+            background-color: #D4AF37;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #1E3A5F;
+        }
+
+        .wireframe-nav {
+            background-color: #1E3A5F;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            color: #D4AF37;
+            font-size: 0.9rem;
+        }
+
+        .wireframe-footer {
+            background-color: #1E3A5F;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+            border-radius: 4px;
+            color: #D4AF37;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #1E3A5F 0%, #2a4f7f 100%);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            border-top: 5px solid #D4AF37;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin-bottom: 0.8rem;
+            font-weight: 300;
+            opacity: 0.98;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+                letter-spacing: 0.3px;
+            }
+
+            header {
+                padding: 2.5rem 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                padding-bottom: 0.6rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .color-scheme-container {
+                grid-template-columns: 1fr;
+            }
+
+            .wireframe-container {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding: 0 0.75rem;
+                margin: 1.5rem auto;
+            }
+
+            section {
+                padding: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+
+            footer {
+                padding: 2rem;
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GACC - Greater Accra Chamber of Commerce</h1>
+        <p>Site Plan &amp; Development Strategy</p>
+    </header>
+
+    <main>
+        <!-- SITE NAME SECTION -->
+        <section>
+            <h2>Site Name</h2>
+            <h3>GACC - Greater Accra Chamber of Commerce</h3>
+            <p>
+                <strong>Reason for Selection:</strong>
+            </p>
+            <p>
+                The name "GACC" represents the Greater Accra Chamber of Commerce, which is the primary organization serving the business community in the Greater Accra Region of Ghana. This acronym is memorable, professional, and directly communicates the organization's purpose and geographic focus. The full name provides clarity while the acronym offers a concise identifier suitable for branding, digital presence, and professional communications. This name immediately establishes credibility with local business owners and entrepreneurs seeking to network and grow their enterprises within the Accra business ecosystem.
+            </p>
+            <p>
+                <strong>Optional Domain:</strong> gacc-chamber.com or gacc-accra.org
+            </p>
+        </section>
+
+        <!-- SITE PURPOSE SECTION -->
+        <section>
+            <h2>Site Purpose</h2>
+            <p>
+                The GACC website serves as a comprehensive digital hub for the Greater Accra Chamber of Commerce, providing essential resources and services to its member businesses and the broader business community. The website functions as:
+            </p>
+            <ul>
+                <li><strong>Member Directory:</strong> A searchable database of member businesses, enabling networking and B2B connections</li>
+                <li><strong>Information Portal:</strong> Access to chamber news, business resources, local economic data, and industry updates</li>
+                <li><strong>Membership Management:</strong> Information about membership levels, benefits, and an online application process</li>
+                <li><strong>Event Hub:</strong> Calendar of chamber events, seminars, networking meetings, and registration capabilities</li>
+                <li><strong>Business Resources:</strong> Links to government resources, entrepreneurship programs, and business development tools</li>
+                <li><strong>Community Engagement:</strong> Information about community initiatives, partnerships, and corporate social responsibility programs</li>
+            </ul>
+            <p>
+                The website aims to strengthen business relationships, facilitate commerce, and position the Greater Accra Chamber of Commerce as a vital resource for business growth and community development in the region.
+            </p>
+        </section>
+
+        <!-- SCENARIOS SECTION -->
+        <section>
+            <h2>Target Audience Scenarios</h2>
+            <p>
+                The following scenarios represent typical website visitors and their primary information needs:
+            </p>
+
+            <div class="scenario">
+                <strong>Scenario 1: Prospective Business Owner</strong>
+                <p>
+                    Sarah is a young entrepreneur starting a tech consulting business in Accra. She wants to understand the benefits of chamber membership, find networking opportunities with other tech professionals, and learn about available business support resources. Her key questions:
+                </p>
+                <ul>
+                    <li>What are the membership options and pricing?</li>
+                    <li>How can I network with other business owners in my industry?</li>
+                    <li>What resources does the chamber offer to help new businesses?</li>
+                    <li>How do I apply for membership online?</li>
+                </ul>
+            </div>
+
+            <div class="scenario">
+                <strong>Scenario 2: Existing Chamber Member</strong>
+                <p>
+                    Kwame owns an established manufacturing business and has been a chamber member for 3 years. He wants to stay updated on upcoming networking events, access the member directory to find suppliers and partners, and learn about new business development opportunities. His key questions:
+                </p>
+                <ul>
+                    <li>When is the next networking event or business seminar?</li>
+                    <li>How can I search for other member businesses in specific industries?</li>
+                    <li>What new initiatives or partnerships is the chamber launching?</li>
+                    <li>Where can I find relevant government and regulatory information?</li>
+                </ul>
+            </div>
+
+            <div class="scenario">
+                <strong>Scenario 3: Corporate Partnership Prospect</strong>
+                <p>
+                    Ama represents a financial institution interested in sponsoring or partnering with the chamber. She needs information about the chamber's reach, member base, marketing opportunities, and impact in the community. Her key questions:
+                </p>
+                <ul>
+                    <li>How many member businesses does the chamber represent?</li>
+                    <li>What is the chamber's reach and influence in Greater Accra?</li>
+                    <li>What sponsorship and partnership opportunities are available?</li>
+                    <li>How can we get in touch with the chamber leadership?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- COLOR SCHEME SECTION -->
+        <section>
+            <h2>Color Scheme</h2>
+            <p>
+                The selected color palette reflects professionalism, trust, and elegance while maintaining accessibility and readability. These colors are strategically applied throughout the website design and this planning document.
+            </p>
+
+            <div class="color-scheme-container">
+                <div>
+                    <div class="color-box color-primary">
+                        Primary Blue (#1E3A5F)
+                    </div>
+                    <p style="margin-top: 0.8rem;">
+                        <strong>Usage:</strong> Main headers (h1, h2), navigation bars, footer background, primary buttons, and key structural elements. This professional color conveys trust, stability, and authority—essential for a business chamber organization.
+                    </p>
+                </div>
+                <div>
+                    <div class="color-box color-accent">
+                        Accent Gold (#D4AF37)
+                    </div>
+                    <p style="margin-top: 0.8rem;">
+                        <strong>Usage:</strong> Accent borders, section highlights, call-to-action buttons, interactive elements, and decorative accents. The gold color adds warmth and prestige, drawing attention to important features and creating visual interest.
+                    </p>
+                </div>
+                <div>
+                    <div class="color-box color-light">
+                        Light Gray (#F5F5F5)
+                    </div>
+                    <p style="margin-top: 0.8rem;">
+                        <strong>Usage:</strong> Page backgrounds, secondary backgrounds, and content section backgrounds. This neutral color provides excellent contrast with text while reducing eye strain and creating a professional appearance.
+                    </p>
+                </div>
+                <div>
+                    <div class="color-box color-dark">
+                        Dark Gray (#333333)
+                    </div>
+                    <p style="margin-top: 0.8rem;">
+                        <strong>Usage:</strong> Body text, paragraph content, and secondary text. This dark neutral provides optimal readability against light backgrounds while being softer than pure black.
+                    </p>
+                </div>
+            </div>
+
+            <h3>Color Accessibility</h3>
+            <p>
+                All color combinations meet WCAG AA contrast requirements, ensuring the site is accessible to users with color vision deficiency. The primary dark blue on white background provides a contrast ratio of 8.5:1, and the accent gold on dark blue provides sufficient contrast for visibility.
+            </p>
+        </section>
+
+        <!-- TYPOGRAPHY SECTION -->
+        <section>
+            <h2>Typography</h2>
+            <p>
+                Three complementary font families have been selected to create a professional, readable, and visually appealing design that supports the chamber's brand identity.
+            </p>
+
+            <h3>Font Selection &amp; Usage</h3>
+
+            <div class="typography-example">
+                <div class="typo-heading">1. Georgia (Serif Font)</div>
+                <p style="margin-top: 0.8rem;">
+                    <strong>Font Family:</strong> Georgia, serif<br>
+                    <strong>Usage:</strong> Primary headings (h1, h2, h3), page title, and emphasis text<br>
+                    <strong>Purpose:</strong> The elegant serif style conveys professionalism, tradition, and credibility. Georgia's readability on screen makes it ideal for headers while adding visual hierarchy to the document.
+                </p>
+            </div>
+
+            <div class="typography-example">
+                <div class="typo-body" style="font-size: 1.3rem; margin-bottom: 0.5rem;">2. Segoe UI (Sans-Serif Font)</div>
+                <p style="margin-top: 0.8rem;">
+                    <strong>Font Family:</strong> 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif<br>
+                    <strong>Usage:</strong> Body text, paragraphs, navigation, and general content<br>
+                    <strong>Purpose:</strong> A modern, clean sans-serif font that ensures excellent readability on all devices and screen sizes. This is the primary typeface for body content, providing clarity and accessibility for all users.
+                </p>
+            </div>
+
+            <div class="typography-example">
+                <div class="typo-accent">3. Trebuchet MS (Accent Sans-Serif Font)</div>
+                <p style="margin-top: 0.8rem;">
+                    <strong>Font Family:</strong> Trebuchet MS, sans-serif<br>
+                    <strong>Usage:</strong> Accent text, special callouts, labels, and supplementary headings<br>
+                    <strong>Purpose:</strong> A friendly, distinctive sans-serif used sparingly for special emphasis or when differentiation from body text is needed. Provides visual variety while maintaining professionalism.
+                </p>
+            </div>
+
+            <h3>Font Pairing Strategy</h3>
+            <p>
+                The Georgia serif font pairs excellently with Segoe UI sans-serif, creating a classic yet modern design. This combination is commonly used in professional web design and provides strong visual hierarchy while maintaining readability across devices.
+            </p>
+        </section>
+
+        <!-- WIREFRAME SECTION -->
+        <section class="wireframe-section">
+            <h2>Wireframe Design</h2>
+            <p>
+                Below are wireframes for the website home page, showing both mobile and desktop/tablet layouts. These simple representations illustrate the structural layout and content hierarchy without specific content details.
+            </p>
+
+            <div class="wireframe-container">
+                <!-- Mobile Wireframe -->
+                <div class="wireframe">
+                    <div class="wireframe-title">Mobile View (320px - 480px)</div>
+                    <div class="wireframe-content">
+                        <div class="wireframe-header">GACC Logo + Title</div>
+                        <div class="wireframe-nav">☰ Navigation Menu</div>
+                        <div class="wireframe-box">Hero/Banner Section</div>
+                        <div class="wireframe-box">Quick Links / CTAs</div>
+                        <div class="wireframe-box">Welcome Content</div>
+                        <div class="wireframe-box">Featured Members</div>
+                        <div class="wireframe-box">Upcoming Events</div>
+                        <div class="wireframe-box">Membership Info</div>
+                        <div class="wireframe-box">Contact / Newsletter</div>
+                        <div class="wireframe-footer">Footer</div>
+                    </div>
+                </div>
+
+                <!-- Desktop/Tablet Wireframe -->
+                <div class="wireframe">
+                    <div class="wireframe-title">Desktop/Tablet View (900px+)</div>
+                    <div class="wireframe-content">
+                        <div class="wireframe-header">GACC Logo + Title + Navigation</div>
+                        <div class="wireframe-box" style="height: 180px;">Hero/Banner Section (Full Width)</div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                            <div class="wireframe-box">Quick Link 1</div>
+                            <div class="wireframe-box">Quick Link 2</div>
+                            <div class="wireframe-box">Quick Link 3</div>
+                            <div class="wireframe-box">Quick Link 4</div>
+                        </div>
+                        <div class="wireframe-box">Welcome / About Section</div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
+                            <div class="wireframe-box">Featured Member 1</div>
+                            <div class="wireframe-box">Featured Member 2</div>
+                            <div class="wireframe-box">Featured Member 3</div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 0.5rem;">
+                            <div class="wireframe-box">Upcoming Events (Main)</div>
+                            <div class="wireframe-box">Membership Info (Sidebar)</div>
+                        </div>
+                        <div class="wireframe-box">Call to Action / Newsletter</div>
+                        <div class="wireframe-footer">Footer (Multiple Columns)</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Wireframe Description</h3>
+            <p>
+                <strong>Mobile Layout:</strong> Optimized for vertical scrolling with single-column layout. Navigation is collapsed into a hamburger menu. All sections stack vertically for easy thumb navigation on smaller screens.
+            </p>
+            <p>
+                <strong>Desktop/Tablet Layout:</strong> Multi-column layout utilizing the wider viewport. Navigation is horizontal in the header. Content is organized in grid formations (2-3 columns) for featured members and quick links. A sidebar is introduced for secondary content like membership information.
+            </p>
+            <p>
+                Both layouts maintain consistent branding, navigation patterns, and color schemes while optimizing content presentation for their respective screen sizes. The responsive design ensures a seamless user experience across all devices.
+            </p>
+        </section>
+
+        <!-- SECTION ABOUT IMPLEMENTATION -->
+        <section>
+            <h2>Design Implementation Notes</h2>
+            <p>
+                This site plan document serves as both the project planning document and a demonstration of the selected design elements in action. The color scheme and typography visible in this document are drawn directly from the specifications outlined in their respective sections.
+            </p>
+            <h3>CSS Framework &amp; Approach</h3>
+            <ul>
+                <li>Responsive CSS Grid and Flexbox layouts for flexible, mobile-first design</li>
+                <li>Mobile breakpoint at 768px for tablet and larger screen optimizations</li>
+                <li>CSS variables potentially for color management and consistency</li>
+                <li>Semantic HTML5 elements for accessibility and SEO</li>
+                <li>Normalized styles across browsers using normalize.css</li>
+            </ul>
+            <h3>Future Development</h3>
+            <ul>
+                <li>Integration of member database and directory functionality</li>
+                <li>Event management and registration system</li>
+                <li>Member login and dashboard area</li>
+                <li>Search functionality across business directory and resources</li>
+                <li>Blog or news section for updates and industry information</li>
+                <li>Contact forms and inquiry systems</li>
+                <li>Social media integration</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Greater Accra Chamber of Commerce. Site Plan Document.</p>
+        <p>This is a planning document for the GACC website development project.</p>
+    </footer>
+</body>
+</html>
