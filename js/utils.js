@@ -27,7 +27,7 @@ function injectNavigation(currentPage = '') {
           <li><a href="${getPagePath('home', currentPage)}" ${currentPage === 'home' ? 'aria-current="page"' : ''}>Home</a></li>
           <li><a href="${getPagePath('directory', currentPage)}" ${currentPage === 'directory' ? 'aria-current="page"' : ''}>Directory</a></li>
           <li><a href="${getPagePath('join', currentPage)}" ${currentPage === 'join' ? 'aria-current="page"' : ''}>Join</a></li>
-          <li><a href="#discover">Discover</a></li>
+          <li><a href="${getPagePath('discover', currentPage)}" ${currentPage === 'discover' ? 'aria-current="page"' : ''}>Discover</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -70,7 +70,7 @@ function injectFooter() {
             <ul>
               <li><a href="${getPagePath('home')}">Home</a></li>
               <li><a href="${getPagePath('directory')}">Directory</a></li>
-              <li><a href="#discover">Discover</a></li>
+              <li><a href="${getPagePath('discover')}">Discover</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
@@ -114,12 +114,14 @@ function getPagePath(targetPage, currentPage = '') {
     if (targetPage === 'home') return 'index.html';
     if (targetPage === 'directory') return '../directory.html';
     if (targetPage === 'join') return 'join.html';
+    if (targetPage === 'discover') return 'discover.html';
   } 
   // When linking from root level pages
   else {
     if (targetPage === 'home') return 'chamber/index.html';
     if (targetPage === 'directory') return 'directory.html';
     if (targetPage === 'join') return 'chamber/join.html';
+    if (targetPage === 'discover') return 'chamber/discover.html';
   }
   
   return '#';
