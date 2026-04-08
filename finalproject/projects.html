@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Abdul Ganiyu Abdul Aziz's collection of web development projects and case studies.">
+    <meta name="author" content="Abdul Ganiyu Abdul Aziz">
+    <meta property="og:title" content="Projects - Developer Portfolio">
+    <meta property="og:description" content="View my latest projects and development work.">
+    <meta property="og:type" content="website">
+    <title>Projects - Developer Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Dev Portfolio</div>
+            <button class="hamburger" id="hamburger">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="form.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects-section">
+            <h1>My Projects</h1>
+            
+            <div class="filter-controls">
+                <label for="category-filter">Filter by Category:</label>
+                <select id="categoryFilter">
+                    <option value="">All Projects</option>
+                    <option value="frontend">Frontend</option>
+                    <option value="fullstack">Full Stack</option>
+                    <option value="responsive">Responsive Design</option>
+                </select>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Project Details -->
+    <div id="projectModal" class="modal" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal" aria-label="Close modal">&times;</button>
+            <div id="modalBody">
+                <!-- Project details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Developer Portfolio</p>
+        <p><a href="attributions.html">Attributions</a> | <a href="https://your-video-link.com" target="_blank">Video Demo</a></p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

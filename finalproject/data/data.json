@@ -1,0 +1,154 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Chamber of Commerce Website",
+      "category": "fullstack",
+      "description": "A comprehensive website for a local chamber of commerce with member directory, event listings, and weather integration.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "API Integration"],
+      "date": "2024",
+      "link": "#",
+      "image": "📱"
+    },
+    {
+      "id": 2,
+      "title": "Weather Dashboard",
+      "category": "frontend",
+      "description": "Real-time weather application fetching data from a weather API with responsive design and local storage.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Weather API", "Local Storage"],
+      "date": "2024",
+      "link": "#",
+      "image": "🌤️"
+    },
+    {
+      "id": 3,
+      "title": "Recipe Discovery Platform",
+      "category": "fullstack",
+      "description": "Dynamic recipe search and discovery platform with filtering, favorites, and detailed recipe modals.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Fetch API", "DOM Manipulation"],
+      "date": "2024",
+      "link": "#",
+      "image": "🍳"
+    },
+    {
+      "id": 4,
+      "title": "Movie Database Explorer",
+      "category": "frontend",
+      "description": "Interactive movie database with search functionality, detailed movie information, and sorting capabilities.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "TMDB API", "Array Methods"],
+      "date": "2024",
+      "link": "#",
+      "image": "🎬"
+    },
+    {
+      "id": 5,
+      "title": "Personal Blog Platform",
+      "category": "responsive",
+      "description": "Responsive blog website with mobile-first design, pagination, and category filtering for articles.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Responsive Design", "JSON Data"],
+      "date": "2024",
+      "link": "#",
+      "image": "📝"
+    },
+    {
+      "id": 6,
+      "title": "Task Management App",
+      "category": "frontend",
+      "description": "Todo application with add, edit, delete functions, persistent storage, and task filtering.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Local Storage", "Event Listeners"],
+      "date": "2024",
+      "link": "#",
+      "image": "✓"
+    },
+    {
+      "id": 7,
+      "title": "Portfolio Website",
+      "category": "responsive",
+      "description": "Professional portfolio showcase with project grid, about section, and contact form integration.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Forms"],
+      "date": "2024",
+      "link": "#",
+      "image": "💼"
+    },
+    {
+      "id": 8,
+      "title": "E-commerce Product Catalog",
+      "category": "fullstack",
+      "description": "Product listing page with filtering, sorting, shopping cart functionality, and checkout form.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "JSON Data", "DOM Manipulation"],
+      "date": "2024",
+      "link": "#",
+      "image": "🛒"
+    },
+    {
+      "id": 9,
+      "title": "Travel Destination Guide",
+      "category": "responsive",
+      "description": "Guide to multiple travel destinations with maps, attractions, and user reviews functionality.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Maps API", "Local Storage"],
+      "date": "2024",
+      "link": "#",
+      "image": "✈️"
+    },
+    {
+      "id": 10,
+      "title": "Expense Tracker",
+      "category": "frontend",
+      "description": "Financial management tool for tracking expenses with categories, charts, and monthly summaries.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Local Storage", "Data Visualization"],
+      "date": "2024",
+      "link": "#",
+      "image": "💰"
+    },
+    {
+      "id": 11,
+      "title": "Quiz Application",
+      "category": "frontend",
+      "description": "Interactive quiz game with timed questions, score tracking, and result analysis with modals.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Event Handling", "DOM Manipulation"],
+      "date": "2024",
+      "link": "#",
+      "image": "❓"
+    },
+    {
+      "id": 12,
+      "title": "Music Player App",
+      "category": "frontend",
+      "description": "Custom HTML5 audio player with playlist management, volume control, and playback features.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "HTML5 Audio API", "Event Listeners"],
+      "date": "2024",
+      "link": "#",
+      "image": "🎵"
+    },
+    {
+      "id": 13,
+      "title": "Fitness Tracker",
+      "category": "fullstack",
+      "description": "Health and fitness tracking application with workout logging, progress tracking, and goals management.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Local Storage", "Chart.js"],
+      "date": "2024",
+      "link": "#",
+      "image": "💪"
+    },
+    {
+      "id": 14,
+      "title": "News Aggregator",
+      "category": "fullstack",
+      "description": "News feed aggregator with real-time updates, article categories, and saved articles functionality.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "News API", "Fetch API"],
+      "date": "2024",
+      "link": "#",
+      "image": "📰"
+    },
+    {
+      "id": 15,
+      "title": "Calculator with History",
+      "category": "frontend",
+      "description": "Advanced calculator with arithmetic operations, calculation history, and clear history function.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Event Handling", "Local Storage"],
+      "date": "2024",
+      "link": "#",
+      "image": "🧮"
+    }
+  ]
+}
