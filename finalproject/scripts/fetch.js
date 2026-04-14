@@ -105,6 +105,8 @@ function createProjectCard(project) {
     });
     
     return card;
+}
+
 /**
  * Set up category filtering functionality
  * Uses array filter() method to filter projects by selected category
@@ -130,7 +132,8 @@ function setupFiltering() {
         // Update display with filtered results
         displayProjects(filteredProjects);
     });
-            
+}
+
 /**
  * Display detailed project information in modal dialog
  * Uses template literals and array map() method for technology list generation

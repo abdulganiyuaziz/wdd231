@@ -19,9 +19,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">Dev Portfolio</div>
-            <button class="hamburger" id="hamburger">☰</button>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="logo" aria-label="Developer Portfolio">Dev Portfolio</div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link active">About</a></li>
@@ -31,7 +31,7 @@
         </nav>
     </header>
 
-    <main>
+    <main role="main">
         <section class="about-section">
             <h1>About Me</h1>
             <div class="about-content">
@@ -60,7 +60,7 @@
 
     <footer>
         <p>&copy; 2026 Developer Portfolio</p>
-        <p><a href="attributions.html">Attributions</a> | <a href="https://your-video-link.com" target="_blank">Video Demo</a></p>
+        <p><a href="attributions.html">Attributions</a> | <a href="https://your-video-link.com" target="_blank" rel="noopener noreferrer">Video Demo</a></p>
     </footer>
 
     <script type="module" src="scripts/main.js"></script>
